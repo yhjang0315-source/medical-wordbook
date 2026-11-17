@@ -1,6 +1,6 @@
 // Local preview server: wraps the page like the artifact host does and serves its data and image files.
 const fs = require('fs'), path = require('path'), http = require('http');
-const root = path.resolve(__dirname, '..'), types = { '.json': 'application/json', '.jpg': 'image/jpeg', '.png': 'image/png', '.svg': 'image/svg+xml' };
+const root = path.resolve(__dirname, '..'), types = { '.json': 'application/json', '.jpg': 'image/jpeg', '.png': 'image/png', '.svg': 'image/svg+xml', '.html': 'text/html; charset=utf-8', '.webmanifest': 'application/manifest+json', '.js': 'text/javascript' };
 const wrap = body => '<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><body style="margin:0">' + body;
 http.createServer((q, s) => {
   const p = decodeURIComponent(q.url.split('?')[0]);
@@ -14,4 +14,4 @@ http.createServer((q, s) => {
   const f = path.join(root, p), ext = path.extname(f);
   if (types[ext] && f.startsWith(root) && fs.existsSync(f)) { s.writeHead(200, { 'content-type': types[ext] }); return s.end(fs.readFileSync(f)); }
   s.writeHead(200, { 'content-type': 'text/html; charset=utf-8' }); s.end(wrap(fs.readFileSync(path.join(root, 'medical-wordbook.html'), 'utf8')));
-}).listen(8765);
+}).listen(process.env.PORT || 8765);

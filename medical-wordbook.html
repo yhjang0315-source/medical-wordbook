@@ -34,6 +34,17 @@ button { font: inherit; color: inherit; cursor: pointer }
 
 header h1 { font-size: 26px; font-weight: 700; margin: 0; letter-spacing: -0.01em; text-wrap: balance }
 header p { margin: 4px 0 0; color: var(--muted); font-size: 14px }
+/* account */
+.head-row { display: flex; align-items: center; justify-content: space-between; gap: 12px }
+#acct { margin-top: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px; display: flex; flex-direction: column; gap: 12px }
+#acct[hidden] { display: none }
+#acct label { display: flex; flex-direction: column; gap: 4px; font-size: 12px; font-weight: 600; color: var(--muted); flex: 1; min-width: 150px }
+#acct input { font: inherit; font-weight: 400; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; min-width: 0 }
+#acct .line { display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-end }
+#acct dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 4px 16px; font-size: 14px }
+#acct dt { color: var(--muted) } #acct dd { margin: 0; overflow-wrap: anywhere }
+#acct .uid { font-family: var(--mono); font-weight: 500 }
+#acct .msg { margin: 0; font-size: 13px; color: var(--ink); font-weight: 500 } #acct .note { margin: 0; font-size: 12px; color: var(--muted) }
 
 .decks { display: grid; grid-template-columns: repeat(auto-fit, minmax(104px, 1fr)); gap: 8px }
 .body-grid { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 14px; align-items: start }
@@ -177,8 +188,9 @@ footer .row { align-items: center }
 
 <div class="wrap" id="app" data-deck="dx">
   <header>
-    <h1>약·병명 단어장</h1>
+    <div class="head-row"><h1>약·병명 단어장</h1><button class="btn small" id="acct-btn" data-acct="toggle" aria-expanded="false" aria-controls="acct">로그인</button></div>
     <p>비전공자를 위한 병명, 약, 검사 수치, 인체, 의학 용어 카드. 분야, 수준, 설명 깊이를 골라 원하는 만큼만 공부합니다.</p>
+    <section id="acct" aria-label="계정" hidden></section>
   </header>
   <div class="decks" role="tablist" aria-label="단어장 선택" id="decks"></div>
   <div class="modes" role="tablist" aria-label="학습 방식" id="modes">
@@ -194,7 +206,7 @@ footer .row { align-items: center }
     <p>학습용 요약입니다. 실제 진단과 약 복용은 의사·약사와 상의하세요. 상품명은 이해를 돕기 위한 대표 예시입니다. 검사 참고 범위는 검사실마다 조금씩 다르고, 피부 단면은 구조를 익히기 위해 직접 그린 단순화한 그림입니다.</p>
     <p>3D 인체 모델(골격, 장기, 근육, 피부): BodyParts3D, © The Database Center for Life Science, licensed under CC Attribution-Share Alike 2.1 Japan. 웹에서 돌릴 수 있도록 형상을 단순화했습니다.</p>
     <p>여성 장기·피부 모델: Browne, Kristen, and Heidi Schlehlein. 3D Reference Organ Set for Female, HuBMAP Human Reference Atlas (https://doi.org/10.48539/HBM637.DWBM.744), Visible Human Project (U.S. National Library of Medicine) 데이터 기반, CC BY 4.0. 형상을 단순화하고 크기를 맞췄습니다.</p>
-    <div class="row"><span>학습 기록은 이 브라우저에만 저장됩니다.</span><span id="reset-slot"></span></div>
+    <div class="row"><span>학습 기록은 이 브라우저에 저장되고, 로그인하면 계정에도 저장됩니다.</span><span id="reset-slot"></span></div>
   </footer>
 </div>
 
@@ -970,7 +982,7 @@ try { const s = JSON.parse(localStorage.getItem(KEY) || '{}');
   if ([0,1,2,3].includes(s.lv)) st.lv = s.lv; if (['brief','std','full'].includes(s.depth)) st.depth = s.depth;
   if (DECKS[s.deck]) st.deck = s.deck; if (['card','quiz','dict','body'].includes(s.mode)) st.mode = s.mode;
   if (Array.isArray(s.known)) st.known = new Set(s.known); } catch (e) {}
-const save = () => { try { localStorage.setItem(KEY, JSON.stringify({ deck: st.deck, mode: st.mode, lv: st.lv, depth: st.depth, known: [...st.known] })) } catch (e) {} };
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify({ deck: st.deck, mode: st.mode, lv: st.lv, depth: st.depth, known: [...st.known] })) } catch (e) {} push(); };
 
 let card = null, quiz = null;
 const pool = () => DECKS[st.deck].items.filter(it => (!st.cat || it.c === st.cat) && (!st.lv || it.lv === st.lv));
@@ -1305,7 +1317,8 @@ function fresh() { card = null; quiz = null; renderChrome(); renderView(); save(
 
 document.addEventListener('click', e => {
   if (e.target.closest('.noflip')) return;
-  const t = e.target.closest('[data-deck][role="tab"],[data-mode],[data-bview],[data-part],[data-sex],[data-step],[data-reg],[data-dir],[data-cat],[data-lv],[data-depth],[data-act]'); if (!t) return;
+  const t = e.target.closest('[data-deck][role="tab"],[data-mode],[data-bview],[data-part],[data-sex],[data-step],[data-reg],[data-dir],[data-cat],[data-lv],[data-depth],[data-act],[data-acct]'); if (!t) return;
+  if (t.dataset.acct) return acctDo(t.dataset.acct);
   if (t.dataset.bview) { st.bview = t.dataset.bview; return renderView(); }
   if (t.dataset.part) return selectPart(t.dataset.part, t.dataset.key || 'skin', !!t.dataset.key && !t.dataset.nf);
   if (t.dataset.sex) { st.sex = t.dataset.sex; if (!st.vis.some((v, n) => v && layerOk(n))) st.vis[1] = true; return renderView(); }
@@ -1362,5 +1375,80 @@ document.addEventListener('keydown', e => {
   }
 });
 
-renderChrome(); renderView(); renderReset(false);
+/* 계정: 아이디와 비밀번호로 학습 기록을 이어 받는다.
+   아티팩트에서는 공유 저장소(db)에, 그 밖에서는 이 브라우저에 계정을 둔다. 비밀번호는 소금을 친 해시만 저장한다. */
+const SES = 'medwords.session', LACC = 'medwords.accounts', ANON = 'medwords.anon';
+const acct = { key: null, me: null, open: false, msg: '', busy: false, remote: false, sig: '' };
+const AZ = 'ABCDEFGHJKLMNPQRSTUVWXYZ', az = 'abcdefghijkmnpqrstuvwxyz', SP = '!@#$%^&*+=?';
+const rnd = (n, chars) => [...crypto.getRandomValues(new Uint32Array(n))].map(x => chars[x % chars.length]).join('');
+// 고유 ID: 대문자, 소문자, 특수문자가 반드시 하나 이상 들어가는 12자
+const newUid = () => shuffle([...rnd(1, AZ) + rnd(1, az) + rnd(1, SP) + rnd(9, AZ + az + SP)]).join('');
+const hashPw = async (pw, salt) => { const enc = new TextEncoder(), k = await crypto.subtle.importKey('raw', enc.encode(pw), 'PBKDF2', false, ['deriveBits']);
+  const b = await crypto.subtle.deriveBits({ name: 'PBKDF2', hash: 'SHA-256', salt: enc.encode(salt), iterations: 100000 }, k, 256);
+  return [...new Uint8Array(b)].map(x => x.toString(16).padStart(2, '0')).join(''); };
+const dbReady = (async () => { try { return window.claude && window.claude.use ? await window.claude.use('db') : null } catch (e) { return null } })();
+const lget = () => { try { return JSON.parse(localStorage.getItem(LACC) || '{}') } catch (e) { return {} } };
+const lput = o => { try { localStorage.setItem(LACC, JSON.stringify(o)) } catch (e) {} };
+const store = {
+  async findBy(field, val) { const db = await dbReady;
+    if (db) { const s = await db.collection('accounts').where(field, '==', val).limit(1).get(); return s.empty ? null : { key: s.docs[0].id, ...s.docs[0].data() }; }
+    const o = lget(), k = Object.keys(o).find(k => o[k][field] === val); return k ? { key: k, ...o[k] } : null; },
+  async get(key) { const db = await dbReady;
+    if (db) { const s = await db.collection('accounts').doc(key).get(); return s.exists ? { key, ...s.data() } : null; }
+    const o = lget(); return o[key] ? { key, ...o[key] } : null; },
+  async create(data) { const db = await dbReady;
+    if (db) { const r = db.collection('accounts').doc(); await r.set(data); return r.id; }
+    const o = lget(), key = rnd(16, AZ + az); o[key] = data; lput(o); return key; },
+  async patch(key, data) { const db = await dbReady;
+    if (db) return db.collection('accounts').doc(key).update(data);
+    const o = lget(); if (o[key]) { Object.assign(o[key], data); lput(o); } }
+};
+const sigOf = () => [...st.known].sort().join(',');
+let pushT = 0, pushing = false;
+function push() { if (!acct.key || sigOf() === acct.sig) return; clearTimeout(pushT); pushT = setTimeout(flush, 1200); }
+async function flush() { if (pushing || !acct.key) return; const sig = sigOf(); if (sig === acct.sig) return; pushing = true;
+  try { await store.patch(acct.key, { known: [...st.known], at: Date.now() }); acct.sig = sig; }
+  catch (e) { acct.msg = '기록을 계정에 저장하지 못했습니다. 이 브라우저에는 남아 있습니다.'; renderAcct(); }
+  pushing = false; if (acct.key && sigOf() !== acct.sig) push(); }
+function adopt(a, stash) { if (stash) try { localStorage.setItem(ANON, JSON.stringify([...st.known])) } catch (e) {}
+  acct.key = a.key; acct.me = { name: a.name, uid: a.uid }; st.known = new Set(Array.isArray(a.known) ? a.known : []); acct.sig = sigOf();
+  try { localStorage.setItem(SES, a.key) } catch (e) {} fresh(); }
+function renderAcct() { const b = $('#acct-btn'), p = $('#acct'); b.textContent = acct.me ? acct.me.name : '로그인'; b.setAttribute('aria-expanded', acct.open); p.hidden = !acct.open; if (!acct.open) return;
+  const msg = acct.msg ? `<p class="msg" role="status">${esc(acct.msg)}</p>` : '', dis = acct.busy ? ' disabled' : '';
+  const where = `<p class="note">${acct.remote ? '계정과 기록은 이 아티팩트의 저장소에 보관되어 다른 기기에서도 이어집니다.' : '이 화면에서는 계정과 기록이 이 브라우저에만 저장됩니다.'} 다른 곳에서 쓰는 비밀번호는 쓰지 마세요.</p>`;
+  p.innerHTML = acct.me ? `<dl><dt>아이디</dt><dd>${esc(acct.me.name)}</dd><dt>고유 ID</dt><dd class="uid">${esc(acct.me.uid)}</dd><dt>익힌 카드</dt><dd>${st.known.size}장</dd></dl>
+    <div class="line"><label>새 아이디<input id="ac-newname" autocomplete="off"></label><button class="btn small" id="ac-rename" data-acct="rename"${dis}>아이디 바꾸기</button></div>
+    <div class="line"><label>새 비밀번호<input id="ac-newpw" type="password" autocomplete="new-password"></label><button class="btn small" id="ac-repw" data-acct="repw"${dis}>비밀번호 바꾸기</button></div>
+    ${msg}<div class="line"><button class="btn small" id="ac-logout" data-acct="logout">로그아웃</button></div>${where}`
+  : `<div class="line"><label>아이디<input id="ac-name" autocomplete="username"></label><label>비밀번호<input id="ac-pw" type="password" autocomplete="current-password"></label></div>
+    <div class="line"><button class="btn small primary" id="ac-login" data-acct="login"${dis}>로그인</button><button class="btn small" id="ac-signup" data-acct="signup"${dis}>새 계정 만들기</button></div>
+    ${msg}<p class="note">아이디와 비밀번호는 원하는 대로 정하면 됩니다. 계정을 만들면 고유 ID가 함께 발급됩니다.</p>${where}`; }
+async function acctDo(what) { const val = id => { const el = $('#' + id); return el ? el.value : ''; };
+  if (what === 'toggle') { acct.open = !acct.open; acct.msg = ''; return renderAcct(); }
+  if (what === 'logout') { clearTimeout(pushT); await flush(); acct.key = acct.me = null; acct.sig = ''; acct.msg = '로그아웃했습니다.';
+    try { localStorage.removeItem(SES); st.known = new Set(JSON.parse(localStorage.getItem(ANON) || '[]')); } catch (e) { st.known = new Set(); } fresh(); return renderAcct(); }
+  if (acct.busy) return; const name = val('ac-name').trim(), pw = val('ac-pw'), newName = val('ac-newname').trim(), newPw = val('ac-newpw');
+  acct.busy = true; acct.msg = '처리하는 중입니다.'; renderAcct(); let msg = '';
+  try {
+    if (what === 'login') { if (!name || !pw) msg = '아이디와 비밀번호를 입력하세요.';
+      else { const a = await store.findBy('name', name); if (!a || await hashPw(pw, a.salt) !== a.hash) msg = '아이디나 비밀번호가 맞지 않습니다.'; else { adopt(a, true); msg = '로그인했습니다. 기록을 이어 받았습니다.'; } } }
+    else if (what === 'signup') { if (!name || !pw) msg = '아이디와 비밀번호를 입력하세요.';
+      else if (await store.findBy('name', name)) msg = '이미 있는 아이디입니다. 다른 아이디를 쓰세요.';
+      else { let uid = newUid(); while (await store.findBy('uid', uid)) uid = newUid();
+        const salt = rnd(16, AZ + az), data = { name, uid, salt, hash: await hashPw(pw, salt), known: [...st.known], at: Date.now() };
+        adopt({ key: await store.create(data), ...data }, true); msg = '계정을 만들었습니다. 고유 ID는 ' + uid + ' 입니다.'; } }
+    else if (what === 'rename') { if (!newName) msg = '새 아이디를 입력하세요.'; else if (newName === acct.me.name) msg = '지금 아이디와 같습니다.';
+      else if (await store.findBy('name', newName)) msg = '이미 있는 아이디입니다.';
+      else { await store.patch(acct.key, { name: newName }); acct.me.name = newName; msg = '아이디를 바꿨습니다.'; } }
+    else if (what === 'repw') { if (!newPw) msg = '새 비밀번호를 입력하세요.';
+      else { const salt = rnd(16, AZ + az); await store.patch(acct.key, { salt, hash: await hashPw(newPw, salt) }); msg = '비밀번호를 바꿨습니다.'; } }
+  } catch (e) { msg = '계정을 저장하지 못했습니다. 이 화면에서 쓸 수 없는 상태일 수 있습니다.'; }
+  acct.busy = false; acct.msg = msg; renderAcct(); }
+document.addEventListener('keydown', e => { if (e.key === 'Enter' && e.target.closest && e.target.closest('#acct')) { const m = { 'ac-name': 'login', 'ac-pw': 'login', 'ac-newname': 'rename', 'ac-newpw': 'repw' }[e.target.id]; if (m) acctDo(m); } });
+
+renderChrome(); renderView(); renderReset(false); renderAcct();
+// 이전에 로그인한 계정이 있으면 기록을 다시 불러온다
+(async () => { acct.remote = !!(await dbReady); let key = null; try { key = localStorage.getItem(SES) } catch (e) {}
+  if (key) try { const a = await store.get(key); if (a) adopt(a, false); else localStorage.removeItem(SES); } catch (e) {}
+  renderAcct(); })();
 </script>
