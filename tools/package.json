@@ -1,0 +1,6 @@
+{
+  "name": "medical-wordbook-tools",
+  "private": true,
+  "description": "3D 모델과 사진 자료를 만드는 데 쓴 스크립트",
+  "dependencies": { "meshoptimizer": "^0.21.0" }
+}
