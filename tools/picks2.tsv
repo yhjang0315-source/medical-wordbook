@@ -1,0 +1,619 @@
+BP44	mus	forearm	1585084	humeral head of left extensor carpi ulnaris
+BP45	mus	forearm	1582284	humeral head of right extensor carpi ulnaris
+BP46	mus	forearm	871284	ulnar head of left extensor carpi ulnaris
+BP47	mus	forearm	860484	ulnar head of right extensor carpi ulnaris
+BP49	org	brain	995384	left superior parietal lobule precuneus
+BP50	org	brain	996384	right superior parietal lobule precuneus
+BP51	org	brain	1069484	orbital gyri straight gyrus
+FMA10951	org	vessel	384384	inferior vena cava
+FMA11336	mus	abs	475884	linea alba
+FMA12513	org	eye	816584	eyeball
+FMA13295	mus	diaph	10533384	diaphragm
+FMA13336	mus	abs	27464784	right external oblique
+FMA13337	mus	abs	27318584	left external oblique
+FMA13346	mus	neck	697384	right sternohyoid
+FMA13347	mus	neck	688284	left sternohyoid
+FMA13348	mus	neck	1354884	right omohyoid
+FMA13349	mus	neck	1348084	left omohyoid
+FMA13350	mus	neck	555284	right sternothyroid
+FMA13351	mus	neck	545984	left sternothyroid
+FMA13352	mus	neck	364484	right thyrohyoid
+FMA13353	mus	neck	362284	left thyrohyoid
+FMA13358	mus	lat	11398984	right latissimus dorsi
+FMA13359	mus	lat	11369584	left latissimus dorsi
+FMA13375	mus	pect	2268084	right pectoralis minor
+FMA13376	mus	pect	2239984	left pectoralis minor
+FMA13377	mus	abs	9560384	right rectus abdominis
+FMA13378	mus	abs	9443184	left rectus abdominis
+FMA13381	mus	back	2412784	right rhomboid major
+FMA13382	mus	back	2419984	left rhomboid major
+FMA13383	mus	back	754684	right rhomboid minor
+FMA13384	mus	back	753184	left rhomboid minor
+FMA13388	mus	neck	667484	right scalenus posterior
+FMA13389	mus	neck	658784	left scalenus posterior
+FMA13390	mus	neck	1061984	right scalenus medius
+FMA13391	mus	neck	1060184	left scalenus medius
+FMA13392	mus	neck	699284	right scalenus anterior
+FMA13393	mus	neck	685084	left scalenus anterior
+FMA13398	mus	pect	12432084	right serratus anterior
+FMA13399	mus	pect	12411784	left serratus anterior
+FMA13403	mus	back	2946984	right serratus posterior superior
+FMA13404	mus	back	2915484	left serratus posterior superior
+FMA13405	mus	back	4516884	right serratus posterior inferior
+FMA13406	mus	back	4500784	left serratus posterior inferior
+FMA13408	mus	neck	2565784	right sternocleidomastoid
+FMA13409	mus	neck	2514584	left sternocleidomastoid
+FMA13411	mus	pect	407784	left subclavius
+FMA13412	mus	pect	407784	right subclavius
+FMA13414	mus	cuff	1531084	right subscapularis
+FMA13415	mus	cuff	1533584	left subscapularis
+FMA13889	org	brain	252684	pituitary gland
+FMA13892	mus	abs	13320684	right internal oblique
+FMA13893	mus	abs	13209184	left internal oblique
+FMA14331	org	vessel	67684	splenic vein
+FMA14332	org	vessel	10184	superior mesenteric vein
+FMA14335	org	vessel	76984	right renal vein
+FMA14336	org	vessel	28784	left renal vein
+FMA14542	org	colon	34584	appendix
+FMA14544	org	colon	441284	rectum
+FMA14749	org	vessel	17584	superior mesenteric artery
+FMA14750	org	vessel	30184	inferior mesenteric artery
+FMA14752	org	vessel	87784	right renal artery
+FMA14753	org	vessel	65484	left renal artery
+FMA14765	org	vessel	44884	right common iliac artery
+FMA14766	org	vessel	40384	left common iliac artery
+FMA14768	org	vessel	11684	left gastric artery
+FMA14771	org	vessel	40484	common hepatic artery
+FMA14773	org	vessel	166384	splenic artery
+FMA15571	org	kidney	110584	right ureter
+FMA15572	org	kidney	111384	left ureter
+FMA15629	org	adrenal	493784	right adrenal gland
+FMA15630	org	adrenal	989484	left adrenal gland
+FMA15900	org	bladder	200884	urinary bladder
+FMA18806	org	vessel	67284	right external iliac artery
+FMA18807	org	vessel	64484	left external iliac artery
+FMA18809	org	vessel	22984	right internal iliac artery
+FMA18810	org	vessel	25084	left internal iliac artery
+FMA18885	org	vessel	66384	right external iliac vein
+FMA18886	org	vessel	72484	left external iliac vein
+FMA18887	org	vessel	26584	right internal iliac vein
+FMA18888	org	vessel	23984	left internal iliac vein
+FMA19387	org	prostate	54284	right seminal vesicle
+FMA19388	org	prostate	54084	left seminal vesicle
+FMA19667	org	bladder	59384	urethra
+FMA21387	org	vessel	44384	right common iliac vein
+FMA21388	org	vessel	49684	left common iliac vein
+FMA21930	mus	pelvic	183484	external anal sphincter
+FMA22322	mus	psoas	2220184	right iliacus
+FMA22323	mus	psoas	2215384	left iliacus
+FMA22324	mus	glute	1888584	right obturator internus
+FMA22325	mus	glute	1771284	left obturator internus
+FMA22326	mus	glute	588084	right obturator externus
+FMA22327	mus	glute	578184	left obturator externus
+FMA22328	mus	glute	1711384	right gluteus maximus
+FMA22329	mus	glute	1650484	left gluteus maximus
+FMA22330	mus	glute	2590984	right gluteus medius
+FMA22331	mus	glute	2531584	left gluteus medius
+FMA22332	mus	glute	3155584	right gluteus minimus
+FMA22333	mus	glute	3134384	left gluteus minimus
+FMA22334	mus	glute	225684	right gemellus superior
+FMA22335	mus	glute	215384	left gemellus superior
+FMA22336	mus	glute	488984	right gemellus inferior
+FMA22337	mus	glute	471284	left gemellus inferior
+FMA22338	mus	glute	838584	right quadratus femoris
+FMA22339	mus	glute	838084	left quadratus femoris
+FMA22340	mus	glute	755084	right piriformis
+FMA22341	mus	glute	712484	left piriformis
+FMA22342	mus	psoas	2830784	right psoas major
+FMA22343	mus	psoas	2788384	left psoas major
+FMA22344	mus	abs	15663584	right transversus abdominis
+FMA22345	mus	abs	15643184	left transversus abdominis
+FMA22346	mus	abs	560784	right pyramidalis
+FMA22347	mus	abs	552284	left pyramidalis
+FMA22348	mus	back	1294884	right quadratus lumborum
+FMA22349	mus	back	1280184	left quadratus lumborum
+FMA22354	mus	quad	2620984	right sartorius
+FMA22355	mus	quad	2573784	left sartorius
+FMA22358	mus	ham	2177584	right semitendinosus
+FMA22359	mus	ham	2126984	left semitendinosus
+FMA22425	mus	glute	934484	right tensor fasciae latae
+FMA22426	mus	glute	925784	left tensor fasciae latae
+FMA22448	mus	ham	3728284	right semimembranosus
+FMA22449	mus	ham	3606384	left semimembranosus
+FMA22450	mus	adduct	1007584	right pectineus
+FMA22451	mus	adduct	1030784	left pectineus
+FMA22452	mus	adduct	1080484	right adductor brevis
+FMA22454	mus	adduct	1086384	left adductor brevis
+FMA22456	mus	adduct	1857184	right adductor longus
+FMA22457	mus	adduct	1893984	left adductor longus
+FMA22459	mus	adduct	4098784	right adductor magnus
+FMA22460	mus	adduct	4124584	left adductor magnus
+FMA22544	mus	shin	1795784	right tibialis anterior
+FMA22545	mus	shin	1726184	left tibialis anterior
+FMA22546	mus	shin	1190184	right extensor hallucis longus
+FMA22547	mus	shin	1157384	left extensor hallucis longus
+FMA22548	mus	shin	3128784	right extensor digitorum longus
+FMA22549	mus	shin	3100484	left extensor digitorum longus
+FMA22550	mus	shin	316284	right fibularis tertius
+FMA22551	mus	shin	305884	left fibularis tertius
+FMA22552	mus	shin	2910784	right fibularis longus
+FMA22553	mus	shin	2915784	left fibularis longus
+FMA22554	mus	shin	1786784	right fibularis brevis
+FMA22555	mus	shin	1790784	left fibularis brevis
+FMA22558	mus	calf	3428384	right soleus
+FMA22559	mus	calf	3468484	left soleus
+FMA22560	mus	calf	2351084	right plantaris
+FMA22561	mus	calf	2335184	left plantaris
+FMA22591	mus	calf	572384	right popliteus
+FMA22592	mus	calf	558984	left popliteus
+FMA22726	mus	back	2227284	right splenius cervicis
+FMA22727	mus	back	2227284	left splenius cervicis
+FMA22728	mus	back	2663084	right splenius capitis
+FMA22729	mus	back	2662184	left splenius capitis
+FMA22740	mus	back	5377484	right iliocostalis lumborum
+FMA22741	mus	back	5484684	left iliocostalis lumborum
+FMA22742	mus	back	2896184	right iliocostalis thoracis
+FMA22743	mus	back	2812884	left iliocostalis thoracis
+FMA22744	mus	back	1036484	right iliocostalis cervicis
+FMA22745	mus	back	992484	left iliocostalis cervicis
+FMA22751	mus	back	5358084	right longissimus thoracis
+FMA22753	mus	back	5259884	left longissimus thoracis
+FMA22754	mus	back	792684	right longissimus capitis
+FMA22756	mus	back	768784	left longissimus capitis
+FMA22757	mus	back	938284	right longissimus cervicis
+FMA22758	mus	back	903584	left longissimus cervicis
+FMA22779	mus	back	2799084	right spinalis thoracis
+FMA22780	mus	back	2700484	left spinalis thoracis
+FMA22781	mus	back	300884	right spinalis cervicis
+FMA22782	mus	back	296684	left spinalis cervicis
+FMA22872	mus	back	2529984	right semispinalis thoracis
+FMA22873	mus	back	2425284	left semispinalis thoracis
+FMA22874	mus	back	1308384	right semispinalis cervicis
+FMA22875	mus	back	1257884	left semispinalis cervicis
+FMA22876	mus	back	1372784	right semispinalis capitis
+FMA22877	mus	back	1369184	left semispinalis capitis
+FMA22878	mus	back	3699384	right multifidus
+FMA22879	mus	back	3555284	left multifidus
+FMA23083	mus	back	4419784	thoracic rotator
+FMA23089	mus	back	1449584	right lumbar rotator
+FMA23090	mus	back	1294784	left lumbar rotator
+FMA258714	org	brain	164984	right thalamus
+FMA258716	org	brain	369884	left thalamus
+FMA258847	mus	calf	2320584	right calcaneal tendon
+FMA258850	mus	mother	125984	right intermediate tendon
+FMA264840	mus	mother	115584	left intermediate tendon
+FMA264844	mus	calf	2361984	left calcaneal tendon
+FMA274027	org	brain	1077984	choroid plexus of right cerebral hemisphere
+FMA274029	org	brain	1075484	choroid plexus of left cerebral hemisphere
+FMA32530	mus	neck	394684	right rectus capitis posterior major
+FMA32531	mus	neck	391984	left rectus capitis posterior major
+FMA32532	mus	neck	219884	right rectus capitis posterior minor
+FMA32533	mus	neck	215184	left rectus capitis posterior minor
+FMA32534	mus	neck	359284	right obliquus capitis superior
+FMA32535	mus	neck	356884	left obliquus capitis superior
+FMA32536	mus	neck	270684	right obliquus capitis inferior
+FMA32537	mus	neck	261484	left obliquus capitis inferior
+FMA32540	mus	back	1566884	right levator scapulae
+FMA32541	mus	back	1519284	left levator scapulae
+FMA32544	mus	cuff	715984	right supraspinatus
+FMA32545	mus	cuff	741084	left supraspinatus
+FMA32547	mus	cuff	1584084	right infraspinatus muscle
+FMA32548	mus	cuff	1594984	left infraspinatus muscle
+FMA32551	mus	lat	857484	right teres major
+FMA32552	mus	lat	855684	left teres major
+FMA32553	mus	cuff	761284	right teres minor
+FMA32554	mus	cuff	757584	left teres minor
+FMA33581	mus	trap	3481684	ascending part of right trapezius
+FMA33583	mus	trap	3402484	ascending part of left trapezius
+FMA33584	mus	trap	1529284	transverse part of right trapezius
+FMA33585	mus	trap	1514784	transverse part of left trapezius
+FMA33586	mus	trap	2322584	descending part of right trapezius
+FMA33587	mus	trap	2245184	descending part of left trapezius
+FMA34680	mus	delt	1454184	clavicular part of right deltoid
+FMA34681	mus	delt	1424384	clavicular part of left deltoid
+FMA34682	mus	delt	1484184	acromial part of right deltoid
+FMA34683	mus	delt	1453884	acromial part of left deltoid
+FMA34684	mus	delt	2200584	spinal part of right deltoid
+FMA34685	mus	delt	2231484	spinal part of left deltoid
+FMA34690	mus	pect	466584	clavicular part of right pectoralis major
+FMA34691	mus	pect	460684	clavicular part of left pectoralis major
+FMA3736	org	vessel	107884	ascending aorta
+FMA37386	mus	mother	317684	right abductor pollicis brevis
+FMA37387	mus	mother	302084	left abductor pollicis brevis
+FMA37390	mus	mother	395284	right opponens pollicis
+FMA37391	mus	mother	379184	left opponens pollicis
+FMA37396	mus	mother	353784	abductor digiti minimi of right hand
+FMA37397	mus	mother	343584	abductor digiti minimi of left hand
+FMA37398	mus	mother	157284	flexor digiti minimi brevis of right hand
+FMA37399	mus	mother	152284	flexor digiti minimi brevis of left hand
+FMA37400	mus	mother	233284	opponens digiti minimi of right hand
+FMA37401	mus	mother	228584	opponens digiti minimi of left hand
+FMA37459	mus	mother	857984	right abductor hallucis
+FMA37460	mus	mother	854984	left abductor hallucis
+FMA37461	mus	mother	1627484	right flexor digitorum brevis
+FMA37462	mus	mother	1706384	left flexor digitorum brevis
+FMA37463	mus	mother	661584	abductor digiti minimi of right foot
+FMA37464	mus	mother	695384	abductor digiti minimi of left foot
+FMA37465	mus	mother	590384	right flexor accessorius
+FMA37466	mus	mother	625384	left flexor accessorius
+FMA37471	mus	mother	250284	flexor digiti minimi brevis of right foot
+FMA37472	mus	mother	256284	flexor digiti minimi brevis of left foot
+FMA37483	mus	mother	150884	fourth lumbrical of right foot
+FMA37484	mus	mother	161384	fourth lumbrical of left foot
+FMA37485	mus	mother	172384	third lumbrical of right foot
+FMA37486	mus	mother	176184	third lumbrical of left foot
+FMA37665	mus	biceps	582484	right coracobrachialis
+FMA37666	mus	biceps	555684	left coracobrachialis
+FMA37668	mus	biceps	1749484	right brachialis
+FMA37669	mus	biceps	1734384	left brachialis
+FMA3768	org	vessel	164184	arch of aorta
+FMA37684	mus	biceps	1392084	short head of right biceps brachii
+FMA37685	mus	biceps	1435484	short head of left biceps brachii
+FMA37686	mus	biceps	1613384	long head of right biceps brachii
+FMA37687	mus	biceps	1645384	long head of left biceps brachii
+FMA37695	mus	triceps	1344084	medial head of right triceps brachii
+FMA37696	mus	triceps	1311384	medial head of left triceps brachii
+FMA37697	mus	triceps	1815684	lateral head of right triceps brachii
+FMA37698	mus	triceps	1798784	lateral head of left triceps brachii
+FMA37699	mus	triceps	1975784	long head of right triceps brachii
+FMA37700	mus	triceps	1906484	long head of left triceps brachii
+FMA37705	mus	forearm	721884	right anconeus
+FMA37706	mus	forearm	709184	left anconeus
+FMA37717	mus	mother	246284	first lumbrical of right foot
+FMA37718	mus	mother	238084	first lumbrical of left foot
+FMA37719	mus	mother	166684	second lumbrical of right foot
+FMA37720	mus	mother	165484	second lumbrical of left foot
+FMA37741	mus	mother	197384	third plantar interosseous of right foot
+FMA37742	mus	mother	203384	third plantar interosseous of left foot
+FMA37743	mus	mother	216184	second plantar interosseous of right foot
+FMA37744	mus	mother	216984	second plantar interosseous of left foot
+FMA37745	mus	mother	222184	first plantar interosseous of right foot
+FMA37746	mus	mother	219484	first plantar interosseous of left foot
+FMA3784	org	vessel	1190484	descending aorta
+FMA3802	org	heart	257784	trunk of right coronary artery
+FMA3818	org	heart	245484	marginal branch of right coronary artery
+FMA38454	mus	forearm	733384	right pronator quadratus
+FMA38455	mus	forearm	721884	left pronator quadratus
+FMA38460	mus	forearm	836184	right flexor carpi radialis
+FMA38461	mus	forearm	796584	left flexor carpi radialis
+FMA38463	mus	forearm	2220584	right palmaris longus
+FMA38464	mus	forearm	2153184	left palmaris longus
+FMA38479	mus	forearm	3564784	right flexor digitorum profundus
+FMA38480	mus	forearm	3629784	left flexor digitorum profundus
+FMA38482	mus	forearm	952484	right flexor pollicis longus
+FMA38484	mus	forearm	934984	left flexor pollicis longus
+FMA38486	mus	forearm	3658084	right brachioradialis
+FMA38487	mus	forearm	3677984	left brachioradialis
+FMA38495	mus	forearm	1857084	right extensor carpi radialis longus
+FMA38496	mus	forearm	1913884	left extensor carpi radialis longus
+FMA38498	mus	forearm	1574884	right extensor carpi radialis brevis
+FMA38499	mus	forearm	1694784	left extensor carpi radialis brevis
+FMA38501	mus	forearm	3222284	right extensor digitorum
+FMA38502	mus	forearm	3182884	left extensor digitorum
+FMA38504	mus	forearm	1077084	right extensor digiti minimi
+FMA38505	mus	forearm	1075584	left extensor digiti minimi
+FMA38513	mus	forearm	1382584	right supinator
+FMA38514	mus	forearm	1303684	left supinator
+FMA38516	mus	forearm	1238384	right abductor pollicis longus
+FMA38517	mus	forearm	1183384	left abductor pollicis longus
+FMA38519	mus	forearm	586684	right extensor pollicis brevis
+FMA38520	mus	forearm	581284	left extensor pollicis brevis
+FMA38522	mus	forearm	811784	right extensor pollicis longus
+FMA38523	mus	forearm	803684	left extensor pollicis longus
+FMA38525	mus	forearm	583584	right extensor indicis
+FMA38526	mus	forearm	575984	left extensor indicis
+FMA38560	mus	forearm	1298984	humeral head of right pronator teres
+FMA38561	mus	forearm	1268884	humeral head of left pronator teres
+FMA38562	mus	forearm	568784	ulnar head of right pronator teres
+FMA38563	mus	forearm	570384	ulnar head of left pronator teres
+FMA38617	mus	forearm	1956584	humeral head of right flexor carpi ulnaris
+FMA38618	mus	forearm	2018384	humeral head of left flexor carpi ulnaris
+FMA38619	mus	forearm	760884	ulnar head of right flexor carpi ulnaris
+FMA38620	mus	forearm	733884	ulnar head of left flexor carpi ulnaris
+FMA38638	mus	forearm	6407584	humeroulnar head of right flexor digitorum superficialis
+FMA38639	mus	forearm	6541184	humeroulnar head of left flexor digitorum superficialis
+FMA38640	mus	forearm	638484	radial head of right flexor digitorum superficialis
+FMA38641	mus	forearm	638384	radial head of left flexor digitorum superficialis
+FMA38928	mus	quad	4149584	right rectus femoris
+FMA38929	mus	quad	4102584	left rectus femoris
+FMA38930	mus	quad	4778284	right vastus lateralis
+FMA38931	mus	quad	4723784	left vastus lateralis
+FMA38932	mus	quad	3290784	right vastus medialis
+FMA38933	mus	quad	3249084	left vastus medialis
+FMA38934	mus	quad	3093384	right vastus intermedius
+FMA38935	mus	quad	3068784	left vastus intermedius
+FMA3895	org	heart	177184	circumflex branch of left coronary artery
+FMA3941	org	vessel	221284	right common carotid artery
+FMA3953	org	vessel	113084	right subclavian artery
+FMA4058	org	vessel	34984	left common carotid artery
+FMA42398	mus	mother	761884	set of lumbricals of right hand
+FMA42399	mus	mother	746584	set of lumbricals of left hand
+FMA42402	mus	mother	278284	set of palmar interossei of right hand
+FMA42403	mus	mother	268284	set of palmar interossei of left hand
+FMA42404	mus	mother	866484	set of dorsal interossei of right hand
+FMA42405	mus	mother	849684	set of dorsal interossei of left hand
+FMA43883	mus	adduct	2463184	right gracilis
+FMA43884	mus	adduct	2459784	left gracilis
+FMA43886	mus	adduct	474384	right adductor minimus
+FMA43887	mus	adduct	485184	left adductor minimus
+FMA45739	mus	neck	3279084	right platysma
+FMA45740	mus	neck	3225884	left platysma
+FMA45826	mus	neck	368984	right stylohyoid
+FMA45827	mus	neck	356684	left stylohyoid
+FMA45854	mus	pelvic	1154084	right pubococcygeus
+FMA45855	mus	pelvic	1168184	left pubococcygeus
+FMA45856	mus	pelvic	896284	right puborectalis
+FMA45857	mus	pelvic	891984	left puborectalis
+FMA45858	mus	pelvic	923984	right iliococcygeus
+FMA45859	mus	pelvic	917184	left iliococcygeus
+FMA45874	mus	pect	377384	abdominal part of right pectoralis major
+FMA45875	mus	pect	373484	abdominal part of left pectoralis major
+FMA45888	mus	ham	3654984	long head of right biceps femoris
+FMA45889	mus	ham	3709084	long head of left biceps femoris
+FMA45891	mus	ham	1273984	short head of right biceps femoris
+FMA45892	mus	ham	1234984	short head of left biceps femoris
+FMA45957	mus	calf	3238684	medial head of right gastrocnemius
+FMA45958	mus	calf	3256984	medial head of left gastrocnemius
+FMA45960	mus	calf	2455284	lateral head of right gastrocnemius
+FMA45961	mus	calf	2435584	lateral head of left gastrocnemius
+FMA45971	mus	mother	383684	medial head of right flexor hallucis brevis
+FMA45972	mus	mother	371984	medial head of left flexor hallucis brevis
+FMA45973	mus	mother	549684	lateral head of right flexor hallucis brevis
+FMA45974	mus	mother	538684	lateral head of left flexor hallucis brevis
+FMA46018	mus	mother	474084	oblique head of right adductor hallucis
+FMA46019	mus	mother	489684	oblique head of left adductor hallucis
+FMA46020	mus	mother	209084	transverse head of right adductor hallucis
+FMA46021	mus	mother	196884	transverse head of left adductor hallucis
+FMA46110	mus	mother	197684	deep head of right flexor pollicis brevis
+FMA46111	mus	mother	195284	deep head of left flexor pollicis brevis
+FMA46121	mus	mother	234684	oblique head of right adductor pollicis
+FMA46122	mus	mother	216184	oblique head of left adductor pollicis
+FMA46123	mus	mother	509684	transverse head of right adductor pollicis
+FMA46124	mus	mother	464184	transverse head of left adductor pollicis
+FMA46283	mus	neck	583884	superior oblique part of right longus colli
+FMA46284	mus	neck	532484	superior oblique part of left longus colli
+FMA46285	mus	neck	871684	vertical intermediate part of right longus colli
+FMA46286	mus	neck	847784	vertical intermediate part of left longus colli
+FMA46287	mus	neck	558684	inferior oblique part of right longus colli
+FMA46288	mus	neck	530984	inferior oblique part of left longus colli
+FMA46304	mus	neck	196484	anterior belly of right digastric
+FMA46305	mus	neck	191184	anterior belly of left digastric
+FMA46306	mus	neck	652884	posterior belly of right digastric
+FMA46307	mus	neck	645384	posterior belly of left digastric
+FMA46309	mus	neck	990084	right longus capitis
+FMA46310	mus	neck	965084	left longus capitis
+FMA46313	mus	neck	201784	right rectus capitis anterior
+FMA46314	mus	neck	199384	left rectus capitis anterior
+FMA46317	mus	neck	180884	right rectus capitis lateralis
+FMA46318	mus	neck	179884	left rectus capitis lateralis
+FMA46321	mus	neck	562984	right mylohyoid
+FMA46322	mus	neck	558184	left mylohyoid
+FMA46326	mus	neck	266084	right geniohyoid
+FMA46327	mus	neck	259584	left geniohyoid
+FMA46443	mus	pelvic	486884	right coccygeus
+FMA46444	mus	pelvic	485184	left coccygeus
+FMA46759	mus	face	2944884	right frontalis
+FMA46760	mus	face	2929684	left frontalis
+FMA46761	mus	face	1351284	right occipitalis
+FMA46762	mus	face	1337884	left occipitalis
+FMA46763	mus	face	6096384	right temporoparietalis
+FMA46764	mus	face	6081084	left temporoparietalis
+FMA46782	mus	face	416584	orbital part of right orbicularis oculi
+FMA46783	mus	face	414084	orbital part of left orbicularis oculi
+FMA46785	mus	face	1195384	palpebral part of right orbicularis oculi
+FMA46786	mus	face	1152184	palpebral part of left orbicularis oculi
+FMA46796	mus	face	139284	right corrugator supercilii
+FMA46797	mus	face	138484	left corrugator supercilii
+FMA46803	mus	face	84484	right levator labii superioris alaeque nasi
+FMA46804	mus	face	82384	left levator labii superioris alaeque nasi
+FMA46806	mus	face	271984	right levator labii superioris
+FMA46807	mus	face	268784	left levator labii superioris
+FMA46812	mus	face	510984	right zygomaticus major
+FMA46813	mus	face	506084	left zygomaticus major
+FMA46814	mus	face	228484	right zygomaticus minor
+FMA46815	mus	face	227584	left zygomaticus minor
+FMA46817	mus	face	498084	right depressor labii inferioris
+FMA46818	mus	face	491684	left depressor labii inferioris
+FMA46823	mus	face	202084	right levator anguli oris
+FMA46824	mus	face	199584	left levator anguli oris
+FMA46826	mus	face	94684	right mentalis
+FMA46827	mus	face	92684	left mentalis
+FMA46829	mus	face	273184	right depressor anguli oris
+FMA46830	mus	face	268684	left depressor anguli oris
+FMA46835	mus	face	442984	right buccinator
+FMA46836	mus	face	441884	left buccinator
+FMA46839	mus	face	336884	right risorius
+FMA46840	mus	face	334284	left risorius
+FMA46841	mus	face	1880784	orbicularis oris
+FMA4685	org	heart	12684	stem of left coronary artery
+FMA4694	org	vessel	161784	left subclavian artery
+FMA4706	org	heart	96184	coronary sinus
+FMA4707	org	heart	373884	great cardiac vein
+FMA4713	org	heart	216384	middle cardiac vein
+FMA4720	org	vessel	76684	superior vena cava
+FMA4751	org	vessel	70084	right brachiocephalic vein
+FMA4754	org	vessel	29084	right internal jugular vein
+FMA4755	org	vessel	47384	right subclavian vein
+FMA4761	org	vessel	95984	left brachiocephalic vein
+FMA4762	org	vessel	36084	left internal jugular vein
+FMA4763	org	vessel	55684	left subclavian vein
+FMA49001	mus	face	504484	superficial part of right masseter
+FMA49002	mus	face	501684	superficial part of left masseter
+FMA49004	mus	face	707684	deep part of right masseter
+FMA49005	mus	face	705784	deep part of left masseter
+FMA49007	mus	face	5312684	right temporalis
+FMA49008	mus	face	5317884	left temporalis
+FMA49012	mus	face	372284	right medial pterygoid
+FMA49013	mus	face	368484	left medial pterygoid
+FMA49022	mus	face	121084	lower head of right lateral pterygoid
+FMA49023	mus	face	119584	lower head of left lateral pterygoid
+FMA49024	mus	face	116484	upper head of right lateral pterygoid
+FMA49025	mus	face	115584	upper head of left lateral pterygoid
+FMA50737	org	vessel	22784	celiac artery
+FMA51142	mus	mother	1610884	right extensor digitorum brevis
+FMA51143	mus	mother	1614084	left extensor digitorum brevis
+FMA51144	mus	mother	561784	right extensor hallucis brevis
+FMA51145	mus	mother	538984	left extensor hallucis brevis
+FMA52780	org	ear	1185784	ear
+FMA55099	org	nose	1157384	thyroid cartilage
+FMA55606	mus	face	369184	right nasalis
+FMA55607	mus	face	366384	left nasalis
+FMA55608	mus	face	129084	right depressor septi nasi
+FMA55609	mus	face	127284	left depressor septi nasi
+FMA55610	mus	face	274584	right procerus
+FMA55611	mus	face	274184	left procerus
+FMA61822	org	brain	8828284	white matter structure of cerebral hemisphere
+FMA61844	org	brain	1250684	septum pellucidum
+FMA61961	org	brain	184584	anterior commissure
+FMA61970	org	brain	2308284	commissure of fornix of forebrain
+FMA61975	org	brain	122484	lamina terminalis
+FMA62004	org	brain	2638084	medulla oblongata
+FMA62032	org	brain	19284	habenula
+FMA62033	org	brain	126884	pineal body
+FMA62072	org	brain	189384	posterior commissure
+FMA62327	org	brain	348784	tuber cinereum
+FMA62394	org	brain	2341784	peduncle of midbrain
+FMA65014	mus	calf	2943884	right flexor hallucis longus
+FMA65015	mus	calf	2992984	left flexor hallucis longus
+FMA65016	mus	calf	3495784	right flexor digitorum longus
+FMA65017	mus	calf	3568384	left flexor digitorum longus
+FMA65018	mus	calf	3022684	right tibialis posterior
+FMA65019	mus	calf	2903184	left tibialis posterior
+FMA65198	mus	mother	213184	superficial head of right flexor pollicis brevis
+FMA65199	mus	mother	188284	superficial head of left flexor pollicis brevis
+FMA66326	org	vessel	5847484	pulmonary artery
+FMA66643	org	vessel	3627484	pulmonary vein
+FMA67943	org	brain	4503684	pons
+FMA67944	org	brain	11925384	cerebellum
+FMA71307	mus	back	541984	set of interspinales lumborum
+FMA71308	mus	back	197884	set of interspinales thoracis
+FMA71309	mus	back	342584	set of interspinales cervicis
+FMA7131	org	stomach	132184	esophagus
+FMA71442	mus	back	416184	set of anterior cervical intertransversarii
+FMA71443	mus	back	439184	set of posterior cervical intertransversarii
+FMA71444	mus	back	554584	set of lateral lumbar intertransversarius muscles
+FMA7148	org	stomach	469284	stomach
+FMA71567	org	heart	285684	set of anterior cardiac veins
+FMA7163	surf	surf	79324984	skin
+FMA71669	org	heart	37784	set of interventricular septal branches of right coronary artery
+FMA71670	org	heart	60784	set of interventricular septal branches of left coronary artery
+FMA71704	org	nose	341384	set of nasal cartilages
+FMA7196	org	spleen	450884	spleen
+FMA7197	org	liver	970884	liver
+FMA7202	org	gall	692384	gallbladder
+FMA7204	org	kidney	619784	right kidney
+FMA7205	org	kidney	767984	left kidney
+FMA7206	org	bowel	597584	duodenum
+FMA7207	org	bowel	1573484	jejunum
+FMA7208	org	bowel	1562584	ileum
+FMA7234	org	heart	2363484	tricuspid valve
+FMA7235	org	heart	955184	mitral valve
+FMA7246	org	heart	910184	pulmonary valve
+FMA7260	org	heart	193084	anterior papillary muscle of right ventricle
+FMA7261	org	heart	136584	posterior papillary muscle of right ventricle
+FMA7262	org	heart	94984	septal papillary muscle of right ventricle
+FMA72653	org	brain	1522484	right superior frontal gyrus
+FMA72654	org	brain	1522584	left superior frontal gyrus
+FMA72655	org	brain	777984	right middle frontal gyrus
+FMA72656	org	brain	777284	left middle frontal gyrus
+FMA7266	org	heart	195184	posterior papillary muscle of left ventricle
+FMA72661	org	brain	941984	right precentral gyrus
+FMA72662	org	brain	941884	left precentral gyrus
+FMA72665	org	brain	843184	right postcentral gyrus
+FMA72666	org	brain	842984	left postcentral gyrus
+FMA72667	org	brain	489184	right supramarginal gyrus
+FMA72668	org	brain	488984	left supramarginal gyrus
+FMA72669	org	brain	658684	right angular gyrus
+FMA72670	org	brain	658284	left angular gyrus
+FMA72685	org	brain	646384	right middle temporal gyrus
+FMA72686	org	brain	645984	left middle temporal gyrus
+FMA72687	org	brain	652884	right inferior temporal gyrus
+FMA72688	org	brain	652084	left inferior temporal gyrus
+FMA72689	org	brain	307584	right fusiform gyrus
+FMA72690	org	brain	307484	left fusiform gyrus
+FMA72701	org	brain	767384	right accessory short gyrus
+FMA72702	org	brain	766584	left accessory short gyrus
+FMA72705	org	brain	172784	right parahippocampal gyrus
+FMA72706	org	brain	172684	left parahippocampal gyrus
+FMA72713	org	brain	222684	right hippocampus
+FMA72714	org	brain	214084	left hippocampus
+FMA72717	org	brain	585884	right cingulate gyrus
+FMA72718	org	brain	586284	left cingulate gyrus
+FMA7274	org	heart	16579684	wall of heart
+FMA72800	org	brain	417484	anterior part of right superior temporal gyrus
+FMA72801	org	brain	416984	anterior part of left superior temporal gyrus
+FMA72804	org	brain	523684	posterior part of right superior temporal gyrus
+FMA72805	org	brain	523684	posterior part of left superior temporal gyrus
+FMA72826	org	brain	563684	right caudate nucleus
+FMA72827	org	brain	558084	left caudate nucleus
+FMA72828	org	brain	1533584	right putamen
+FMA72829	org	brain	1531884	left putamen
+FMA72830	org	brain	1160384	right globus pallidus
+FMA72831	org	brain	1536984	left globus pallidus
+FMA72832	org	brain	87284	right amygdala
+FMA72833	org	brain	86884	left amygdala
+FMA72908	org	brain	2436184	anterior limb of right internal capsule
+FMA72909	org	brain	2435684	anterior limb of left internal capsule
+FMA72924	org	brain	1465084	right fornix of forebrain
+FMA72925	org	brain	1468684	left fornix of forebrain
+FMA72939	org	brain	153984	right stria terminalis
+FMA72940	org	brain	151384	left stria terminalis
+FMA72975	org	brain	938184	right occipital lobe
+FMA72976	org	brain	937384	left occipital lobe
+FMA72977	org	brain	612084	right insula
+FMA72978	org	brain	612184	left insula
+FMA73303	org	brain	131084	right lateral geniculate body
+FMA73304	org	brain	34384	left lateral geniculate body
+FMA73309	org	brain	10484	right medial geniculate body
+FMA73310	org	brain	10084	left medial geniculate body
+FMA7333	org	lung	1519984	upper lobe of right lung
+FMA7337	org	lung	3279684	lower lobe of right lung
+FMA73413	org	brain	192684	right stria medullaris of thalamus
+FMA73414	org	brain	193584	left stria medullaris of thalamus
+FMA73422	org	brain	10284	right superior colliculus
+FMA73423	org	brain	10284	left superior colliculus
+FMA73434	org	brain	13584	right inferior colliculus
+FMA73435	org	brain	13584	left inferior colliculus
+FMA73461	org	brain	36584	brachium of right superior colliculus
+FMA73462	org	brain	35784	brachium of left superior colliculus
+FMA73463	org	brain	34384	brachium of right inferior colliculus
+FMA73464	org	brain	33684	brachium of left inferior colliculus
+FMA7370	org	lung	2032684	upper lobe of left lung
+FMA7371	org	lung	2214484	lower lobe of left lung
+FMA7383	org	lung	1173984	middle lobe of lung
+FMA7394	org	lung	693584	trachea
+FMA74075	mus	diaph	2946284	set of right levatores costarum longi
+FMA74076	mus	diaph	2912784	set of left levatores costarum longi
+FMA74077	mus	diaph	1484784	set of right levatores costarum breves
+FMA74078	mus	diaph	1487084	set of left levatores costarum breves
+FMA7409	org	lung	5781584	bronchus
+FMA74140	mus	mother	859984	set of dorsal interossei of right foot
+FMA74141	mus	mother	811584	set of dorsal interossei of left foot
+FMA74877	org	brain	83384	mammillary body
+FMA75351	org	brain	232184	interventricular foramen
+FMA76751	org	heart	215984	set of posterior veins of left ventricle
+FMA76775	mus	back	1008384	set of medial lumbar intertransversarius muscles
+FMA76891	org	colon	1576284	mesocolic taenia
+FMA76892	org	colon	1855984	omental taenia
+FMA76893	org	colon	2451484	free taenia
+FMA76994	org	heart	112384	right posterolateral branch of right coronary artery
+FMA78449	org	brain	3910984	right lateral ventricle
+FMA78450	org	brain	3900584	left lateral ventricle
+FMA78454	org	brain	840484	third ventricle
+FMA78467	org	brain	112684	cerebral aqueduct
+FMA78469	org	brain	1506784	fourth ventricle
+FMA78497	org	cord	158184	central canal of spinal cord
+FMA79979	mus	pect	1800784	sternocostal part of right pectoralis major
+FMA79980	mus	pect	1789984	sternocostal part of left pectoralis major
+FMA81752	mus	back	773184	right cervical rotator
+FMA81753	mus	back	715784	left cervical rotator
+FMA83740	org	brain	21384	interpeduncular fossa
+FMA86034	mus	mother	121284	opponens digiti minimi of right foot
+FMA86035	mus	mother	126184	opponens digiti minimi of left foot
+FMA86464	org	brain	6627684	corpus callosum
+FMA9600	org	prostate	87784	prostate
+FMA9756	mus	diaph	40802884	external intercostal muscle
+FMA9757	mus	diaph	36157784	internal intercostal muscle
+FMA9758	mus	diaph	33900784	innermost intercostal muscle
+FMA9761	mus	diaph	876484	right transversus thoracis
+FMA9762	mus	diaph	869884	left transversus thoracis

@@ -1,0 +1,217 @@
+FMA52735	skull	1390684	occipital bone
+FMA52734	skull	1653184	frontal bone
+FMA52736	skull	766184	sphenoid bone
+FMA52740	skull	388784	ethmoid
+FMA9710	skull	121184	vomer
+FMA52748	mandible	1082984	mandible
+FMA52749	hyoid	276784	hyoid bone
+FMA12519	cerv	308684	atlas
+FMA12520	cerv	343584	axis
+FMA12525	cerv	261184	seventh cervical vertebra
+FMA16202	sacr	2220884	sacrum
+FMA7486	ster	594184	manubrium
+FMA7487	ster	995884	body of sternum
+FMA7488	ster	204384	xiphoid process
+FMA10014	thor	564384	ninth thoracic vertebra
+FMA10037	thor	596484	tenth thoracic vertebra
+FMA10059	thor	282684	eleventh thoracic vertebra
+FMA10081	thor	301984	twelfth thoracic vertebra
+FMA12521	cerv	263984	third cervical vertebra
+FMA12522	cerv	211284	fourth cervical vertebra
+FMA12523	cerv	237784	fifth cervical vertebra
+FMA12524	cerv	317584	sixth cervical vertebra
+FMA13072	lumb	647384	first lumbar vertebra
+FMA13073	lumb	347384	second lumbar vertebra
+FMA13074	lumb	737584	third lumbar vertebra
+FMA13075	lumb	771384	fourth lumbar vertebra
+FMA13076	lumb	864184	fifth lumbar vertebra
+FMA13322	clav	255684	right clavicle
+FMA13323	clav	257084	left clavicle
+FMA13395	scap	5662884	right scapula
+FMA13396	scap	6090884	left scapula
+FMA16586	hip	485884	right hip bone
+FMA16587	hip	473584	left hip bone
+FMA230986	foot	14784	middle phalanx of right little toe
+FMA230988	foot	15184	middle phalanx of left little toe
+FMA23130	hume	813484	right humerus
+FMA23131	hume	824684	left humerus
+FMA23464	radi	140284	right radius
+FMA23465	radi	135784	left radius
+FMA23467	ulna	179684	right ulna
+FMA23468	ulna	176984	left ulna
+FMA23725	hand	30884	right trapezoid
+FMA23938	hand	56984	middle phalanx of left index finger
+FMA23940	hand	74884	middle phalanx of left middle finger
+FMA23942	hand	67284	middle phalanx of left ring finger
+FMA23944	hand	44284	middle phalanx of left little finger
+FMA23951	hand	49484	distal phalanx of left thumb
+FMA23953	hand	32584	distal phalanx of left index finger
+FMA23955	hand	31784	distal phalanx of left middle finger
+FMA23957	hand	22484	distal phalanx of left ring finger
+FMA23959	hand	22784	distal phalanx of left little finger
+FMA24435	hand	53784	right scaphoid
+FMA24436	hand	53584	left scaphoid
+FMA24437	hand	43284	right lunate
+FMA24438	hand	43384	left lunate
+FMA24439	hand	35284	right triquetral
+FMA24440	hand	34984	left triquetral
+FMA24441	hand	19884	right pisiform
+FMA24442	hand	19884	left pisiform
+FMA24443	hand	51384	right trapezium
+FMA24444	hand	52984	left trapezium
+FMA24445	hand	30684	left trapezoid
+FMA24446	hand	64284	right capitate
+FMA24447	hand	63984	left capitate
+FMA24448	hand	57584	right hamate
+FMA24449	hand	56584	left hamate
+FMA24450	hand	68484	proximal phalanx of right thumb
+FMA24451	hand	83284	proximal phalanx of right index finger
+FMA24452	hand	98484	proximal phalanx of right middle finger
+FMA24453	hand	81084	proximal phalanx of right ring finger
+FMA24454	hand	60484	proximal phalanx of right little finger
+FMA24455	hand	57084	middle phalanx of right index finger
+FMA24456	hand	73884	middle phalanx of right middle finger
+FMA24457	hand	67584	middle phalanx of right ring finger
+FMA24458	hand	45084	middle phalanx of right little finger
+FMA24459	hand	52084	distal phalanx of right thumb
+FMA24460	hand	32884	distal phalanx of right index finger
+FMA24461	hand	32084	distal phalanx of right middle finger
+FMA24462	hand	22684	distal phalanx of right ring finger
+FMA24463	hand	23384	distal phalanx of right little finger
+FMA24464	hand	121784	right first metacarpal bone
+FMA24465	hand	124084	left first metacarpal bone
+FMA24466	hand	160984	right second metacarpal bone
+FMA24467	hand	163284	left second metacarpal bone
+FMA24468	hand	150984	right third metacarpal bone
+FMA24469	hand	152084	left third metacarpal bone
+FMA24470	hand	115384	right fourth metacarpal bone
+FMA24471	hand	113584	left fourth metacarpal bone
+FMA24472	hand	108984	right fifth metacarpal bone
+FMA24473	hand	107384	left fifth metacarpal bone
+FMA24474	femu	649584	right femur
+FMA24475	femu	660184	left femur
+FMA24477	tibi	342584	right tibia
+FMA24478	tibi	341184	left tibia
+FMA24480	fibu	231184	right fibula
+FMA24481	fibu	227284	left fibula
+FMA24482	foot	298184	right talus
+FMA24483	foot	296284	left talus
+FMA24486	pate	66784	right patella
+FMA24487	pate	66984	left patella
+FMA24497	foot	272484	right calcaneus
+FMA24498	foot	282684	left calcaneus
+FMA24500	foot	151184	navicular bone of right foot
+FMA24501	foot	154884	navicular bone of left foot
+FMA24507	foot	244384	right first metatarsal bone
+FMA24508	foot	243084	left first metatarsal bone
+FMA24509	foot	162984	right second metatarsal bone
+FMA24510	foot	169484	left second metatarsal bone
+FMA24511	foot	151584	right third metatarsal bone
+FMA24512	foot	161484	left third metatarsal bone
+FMA24513	foot	145984	right fourth metatarsal bone
+FMA24514	foot	155984	left fourth metatarsal bone
+FMA24515	foot	171684	right fifth metatarsal bone
+FMA24516	foot	184484	left fifth metatarsal bone
+FMA24521	foot	205784	right medial cuneiform bone
+FMA24522	foot	210584	left medial cuneiform bone
+FMA24523	foot	97484	right intermediate cuneiform bone
+FMA24524	foot	105384	left intermediate cuneiform bone
+FMA24525	foot	135184	right lateral cuneiform bone
+FMA24526	foot	148484	left lateral cuneiform bone
+FMA24528	foot	181784	right cuboid bone
+FMA24529	foot	190284	left cuboid bone
+FMA32634	foot	68184	proximal phalanx of right second toe
+FMA32635	foot	70884	proximal phalanx of left second toe
+FMA32636	foot	61184	proximal phalanx of right third toe
+FMA32637	foot	62984	proximal phalanx of left third toe
+FMA32638	foot	54784	proximal phalanx of right fourth toe
+FMA32639	foot	58384	proximal phalanx of left fourth toe
+FMA32640	foot	57484	proximal phalanx of right little toe
+FMA32641	foot	60384	proximal phalanx of left little toe
+FMA32642	foot	32684	middle phalanx of right second toe
+FMA32643	foot	34384	middle phalanx of left second toe
+FMA32644	foot	31784	middle phalanx of right third toe
+FMA32645	foot	31984	middle phalanx of left third toe
+FMA32646	foot	26084	middle phalanx of right fourth toe
+FMA32647	foot	27384	middle phalanx of left fourth toe
+FMA32650	foot	80384	distal phalanx of right big toe
+FMA32651	foot	79784	distal phalanx of left big toe
+FMA32652	foot	23384	distal phalanx of right second toe
+FMA32653	foot	24184	distal phalanx of left second toe
+FMA32654	foot	16784	distal phalanx of right third toe
+FMA32655	foot	17784	distal phalanx of left third toe
+FMA32656	foot	18184	distal phalanx of right fourth toe
+FMA32657	foot	18284	distal phalanx of left fourth toe
+FMA32658	foot	13784	distal phalanx of right little toe
+FMA32659	foot	14284	distal phalanx of left little toe
+FMA43253	foot	105384	proximal phalanx of right big toe
+FMA43254	foot	109784	proximal phalanx of left big toe
+FMA45097	foot	28884	sesamoid bone of right foot
+FMA45098	foot	27884	sesamoid bone of left foot
+FMA52738	skull	563784	right temporal bone
+FMA52739	skull	560484	left temporal bone
+FMA52788	skull	1486784	right parietal bone
+FMA52789	skull	1512584	left parietal bone
+FMA52892	skull	230684	right zygomatic bone
+FMA52893	skull	228084	left zygomatic bone
+FMA53645	skull	55784	right lacrimal bone
+FMA53646	skull	57684	left lacrimal bone
+FMA53647	skull	51284	right nasal bone
+FMA53648	skull	56284	left nasal bone
+FMA53649	skull	707484	right maxilla
+FMA53650	skull	725384	left maxilla
+FMA53655	skull	179684	right palatine bone
+FMA53656	skull	182184	left palatine bone
+FMA54737	skull	80884	right inferior nasal concha
+FMA54738	skull	74284	left inferior nasal concha
+FMA65470	hand	65784	proximal phalanx of left thumb
+FMA66791	hand	58984	proximal phalanx of left little finger
+FMA71908	hand	98784	proximal phalanx of left middle finger
+FMA71915	hand	84284	proximal phalanx of left index finger
+FMA71916	hand	80884	proximal phalanx of left ring finger
+FMA7857	ribs	709784	right first rib
+FMA7875	ribs	117184	right first costal cartilage
+FMA7882	ribs	1184784	right second rib
+FMA7886	ribs	127084	right second costal cartilage
+FMA7909	ribs	1543084	right third rib
+FMA7913	ribs	134784	right third costal cartilage
+FMA7957	ribs	1924484	right fourth rib
+FMA7976	ribs	174384	right fourth costal cartilage
+FMA7987	ribs	773284	left first rib
+FMA8005	ribs	110284	left first costal cartilage
+FMA8012	ribs	1265284	left second rib
+FMA8031	ribs	117584	left second costal cartilage
+FMA8039	ribs	1560684	left third rib
+FMA8058	ribs	121484	left third costal cartilage
+FMA8066	ribs	2081784	right fifth rib
+FMA8070	ribs	241584	right fifth costal cartilage
+FMA8093	ribs	2078484	left fifth rib
+FMA8112	ribs	226884	left fifth costal cartilage
+FMA8148	ribs	1896184	left fourth rib
+FMA8167	ribs	161084	left fourth costal cartilage
+FMA8175	ribs	2231784	right sixth rib
+FMA8194	ribs	303984	right sixth costal cartilage
+FMA8202	ribs	2221784	left sixth rib
+FMA8221	ribs	298384	left sixth costal cartilage
+FMA8229	ribs	2157384	right seventh rib
+FMA8248	ribs	524684	right seventh costal cartilage
+FMA8256	ribs	2203184	left seventh rib
+FMA8275	ribs	495184	left seventh costal cartilage
+FMA8283	ribs	1832384	right eighth rib
+FMA8310	ribs	1856784	left eighth rib
+FMA8364	ribs	1713984	right ninth rib
+FMA8391	ribs	1801084	left ninth rib
+FMA8445	ribs	1550584	right tenth rib
+FMA8472	ribs	1587984	left tenth rib
+FMA8531	ribs	1121484	right eleventh rib
+FMA8532	ribs	1141384	left eleventh rib
+FMA8533	ribs	663184	right twelfth rib
+FMA8534	ribs	686384	left twelfth rib
+FMA9165	thor	280784	first thoracic vertebra
+FMA9187	thor	418084	second thoracic vertebra
+FMA9209	thor	445584	third thoracic vertebra
+FMA9248	thor	446584	fourth thoracic vertebra
+FMA9922	thor	491784	fifth thoracic vertebra
+FMA9945	thor	244884	sixth thoracic vertebra
+FMA9968	thor	537084	seventh thoracic vertebra
+FMA9991	thor	260384	eighth thoracic vertebra
