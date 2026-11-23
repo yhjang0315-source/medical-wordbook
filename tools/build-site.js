@@ -17,18 +17,68 @@ const head = `<!doctype html>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/icon-192.png">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
-<style>html, body { margin: 0 } #install { position: fixed; right: 16px; bottom: max(16px, env(safe-area-inset-bottom, 0px)); z-index: 50; box-shadow: 0 4px 16px rgba(0,0,0,.25) } #install[hidden] { display: none }</style>
+<style>html, body { margin: 0 }
+#install { position: fixed; right: 16px; bottom: max(16px, env(safe-area-inset-bottom, 0px)); z-index: 50; box-shadow: 0 4px 16px rgba(0,0,0,.25) } #install[hidden] { display: none }
+#guide { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; background: var(--surface); color: var(--ink); border-top: 1px solid var(--line); border-radius: 16px 16px 0 0; box-shadow: 0 -8px 24px rgba(0,0,0,.25);
+  padding: 18px max(16px, env(safe-area-inset-left, 0px)) max(20px, env(safe-area-inset-bottom, 0px)); max-width: 720px; margin: 0 auto }
+#guide[hidden] { display: none } #guide h2 { margin: 0 0 8px; font-size: 18px } #guide ol { margin: 0 0 12px; padding-left: 20px; line-height: 1.7 } #guide p { margin: 0 0 12px; color: var(--muted); font-size: 14px }
+#guide .row { display: flex; flex-wrap: wrap; gap: 8px } #guide a.btn { text-decoration: none; display: inline-block }</style>
 </head>
 <body>
 `;
 const tail = `
 <button class="btn small primary" id="install" hidden>앱으로 설치</button>
+<section id="guide" role="dialog" aria-labelledby="guide-t" hidden></section>
 <script>
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
-(() => { let ev = null; const b = document.getElementById('install');
-  addEventListener('beforeinstallprompt', e => { e.preventDefault(); ev = e; b.hidden = false; });
-  b.addEventListener('click', async () => { if (!ev) return; ev.prompt(); await ev.userChoice; ev = null; b.hidden = true; });
-  addEventListener('appinstalled', () => { b.hidden = true; }); })();
+// 설치 버튼: 브라우저가 설치 창을 띄워 주면 그것을 쓰고, 아니면 브라우저별 설치 방법을 보여 준다.
+(() => {
+  const ua = navigator.userAgent, b = document.getElementById('install'), g = document.getElementById('guide');
+  const installed = () => matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+  const ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1), android = /Android/.test(ua);
+  const kakao = /KAKAOTALK/i.test(ua), inApp = kakao || /NAVER\\(inapp|Instagram|FBAN|FBAV|FB_IAB|Line\\/|DaumApps|everytimeApp|BAND\\/|; wv\\)/i.test(ua);
+  const url = location.href.split('#')[0];
+  let ev = null;
+  const btn = (id, text, href, primary) => href ? \`<a class="btn small\${primary ? ' primary' : ''}" id="\${id}" href="\${href}">\${text}</a>\` : \`<button class="btn small\${primary ? ' primary' : ''}" id="\${id}">\${text}</button>\`;
+  function steps() {
+    if (inApp) {
+      const open = kakao ? 'kakaotalk://web/openExternal?url=' + encodeURIComponent(url)
+        : android ? 'intent://' + url.replace(/^https?:\\/\\//, '') + '#Intent;scheme=https;package=com.android.chrome;end' : '';
+      return { t: '다른 브라우저에서 열어야 설치됩니다', p: '카카오톡, 네이버, 인스타그램 같은 앱 안의 브라우저에서는 앱 설치가 되지 않습니다.',
+        s: ios ? ['오른쪽 아래나 위의 메뉴(… 또는 공유)를 누릅니다', '"Safari로 열기" 또는 "다른 브라우저로 열기"를 고릅니다', '열린 Safari에서 공유 버튼 → "홈 화면에 추가"를 누릅니다']
+               : [\`아래 "\${kakao ? '외부 브라우저로 열기' : 'Chrome에서 열기'}"를 누릅니다\`, '열린 브라우저에서 이 버튼("앱으로 설치")을 다시 누릅니다'],
+        x: (open ? btn('g-open', ios || kakao ? '외부 브라우저로 열기' : 'Chrome에서 열기', open, true) : '') + btn('g-copy', '주소 복사') };
+    }
+    if (ios) return { t: '홈 화면에 추가하기', p: '아이폰과 아이패드는 공유 메뉴에서 설치합니다. Safari, Chrome 모두 됩니다.',
+      s: ['주소창 옆이나 화면 아래의 공유 버튼(네모에서 화살표가 위로 나온 모양)을 누릅니다', '메뉴를 아래로 내려 "홈 화면에 추가"를 누릅니다', '오른쪽 위 "추가"를 누릅니다'], x: '' };
+    if (/SamsungBrowser/.test(ua)) return { t: '앱으로 설치하기', p: '삼성 인터넷에서는 메뉴에서 설치합니다.',
+      s: ['주소창의 설치 아이콘(아래 화살표)이 보이면 누릅니다', '없으면 오른쪽 아래 메뉴(☰) → "현재 페이지 추가" → "홈 화면"을 누릅니다'], x: '' };
+    if (android) return { t: '앱으로 설치하기', p: '설치 창이 뜨지 않으면 Chrome 메뉴에서 설치합니다.',
+      s: ['오른쪽 위 메뉴(⋮)를 누릅니다', '"앱 설치" 또는 "홈 화면에 추가"를 누릅니다', '"설치"를 누릅니다'], x: '' };
+    return { t: '앱으로 설치하기', p: '컴퓨터에서는 Chrome이나 Edge에서 설치할 수 있습니다.',
+      s: ['주소창 오른쪽 끝의 설치 아이콘(모니터에 아래 화살표)을 누릅니다', '없으면 메뉴(⋮ 또는 …) → "앱 설치" 또는 "앱 → 이 사이트를 앱으로 설치"를 누릅니다'], x: '' };
+  }
+  function guide(open) {
+    if (!open) { g.hidden = true; return; }
+    const s = steps();
+    g.innerHTML = \`<h2 id="guide-t">\${s.t}</h2><p>\${s.p}</p><ol>\${s.s.map(x => '<li>' + x + '</li>').join('')}</ol><div class="row">\${s.x}\${btn('g-close', '닫기')}</div>\`;
+    g.hidden = false;
+  }
+  g.addEventListener('click', async e => {
+    const t = e.target.closest('#g-close, #g-copy'); if (!t) return;
+    if (t.id === 'g-close') return guide(false);
+    try { await navigator.clipboard.writeText(url); t.textContent = '복사했습니다'; } catch (x) { prompt('주소를 복사하세요', url); }
+  });
+  b.addEventListener('click', async () => {
+    if (ev) { ev.prompt(); const r = await ev.userChoice.catch(() => null); ev = null; if (r && r.outcome === 'accepted') b.hidden = true; return; }
+    guide(g.hidden);
+  });
+  addEventListener('beforeinstallprompt', e => { e.preventDefault(); ev = e; });
+  addEventListener('appinstalled', () => { b.hidden = true; guide(false); });
+  if (!installed()) b.hidden = false;
+  // 앱 안 브라우저로 들어오면 처음 한 번 안내를 먼저 띄운다
+  if (inApp && !installed()) { let seen = false; try { seen = sessionStorage.getItem('medwords.inapp') === '1'; sessionStorage.setItem('medwords.inapp', '1'); } catch (x) {} if (!seen) guide(true); }
+})();
 </script>
 </body>
 </html>
